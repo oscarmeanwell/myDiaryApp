@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.oscarmeanwell.cwk1">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="myDiary"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewIntent"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisplayEntry"
+            android:parentActivityName=".NewIntent" />
+        <activity
+            android:name=".AddEntry"
+            android:parentActivityName=".NewIntent" />
+        <activity
+            android:name=".AddUser"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisplayImage"
+            android:parentActivityName=".DisplayEntry" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ViewLocationOnMap"
+            android:label="@string/title_activity_view_location_on_map"
+            android:parentActivityName=".DisplayEntry" />
+        <activity android:name=".ImageGallery"
+            android:parentActivityName=".NewIntent"></activity>
+    </application>
+
+</manifest>

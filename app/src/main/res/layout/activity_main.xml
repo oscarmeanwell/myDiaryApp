@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
+    tools:context="com.example.oscarmeanwell.cwk1.MainActivity">
+
+    <TextView
+        android:text="Welcome, please enter your details."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="30dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_below="@+id/textView"
+        android:id="@+id/etUsr"
+        android:paddingTop="30dp"
+        android:hint="User Name"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:gravity="center"
+        android:id="@+id/etPwd"
+        android:hint="Password"
+        android:paddingTop="30dp"/>
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="180dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:text="Create User"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/btn"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>
